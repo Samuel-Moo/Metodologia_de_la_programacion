@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Tablas</title>
+</head>
+<body>
+    <h1>Calculadora de tabla de la verdad</h1>
+
+    <table class="table table-success table-striped">
+        <tr>
+            <th>P</th>
+            <th>q</th>
+            <th>AND</th>
+            <th>OR</th>
+            <th>NOT p</th>
+            <th>NOT q</th>
+        </tr>
+        <tr>
+            <th><input type="number" id="p1" placeholder="Ingrese 1 o 0" value=1 required></th>
+            <th><input type="number" id="q1" placeholder="Ingrese 1 o 0" value=1 required></th>
+            <th><label for="labelAND" id="lblAND"></label></th>
+            <th><label for="labelOR" id="lblOR"></label></th>
+            <th><label for="labelNOTp" id="lblNOTp"></label></th>
+            <th><label for="labelNOTq" id="lblNOTq"></label></th>
+        </tr>
+        <tr>
+            <th><input type="number" id="p2" placeholder="Ingrese 1 o 0" required value=1></th>
+            <th><input type="number" id="q2" placeholder="Ingrese 1 o 0" required value=0></th>
+            <th><label for="labelAND" id="lblAND2"></label></th>
+            <th><label for="labelOR" id="lblOR2"></label></th>
+            <th><label for="labelNOTp" id="lblNOTp2"></label></th>
+            <th><label for="labelNOTq" id="lblNOTq2"></label></th>
+        </tr>
+        <tr>
+            <th><input type="number" id="p3" placeholder="Ingrese 1 o 0" required value=0></th>
+            <th><input type="number" id="q3" placeholder="Ingrese 1 o 0" required value=1></th>
+            <th><label for="labelAND" id="lblAND3"></label></th>
+            <th><label for="labelOR" id="lblOR3"></label></th>
+            <th><label for="labelNOTp" id="lblNOTp3"></label></th>
+            <th><label for="labelNOTq" id="lblNOTq3"></label></th>
+        </tr>
+        <tr>
+            <th><input type="number" id="p4" placeholder="Ingrese 1 o 0" value=0></th>
+            <th><input type="number" id="q4" placeholder="Ingrese 1 o 0" value=0></th>
+            <th><label for="labelAND" id="lblAND4"></label></th>
+            <th><label for="labelOR" id="lblOR4"></label></th>
+            <th><label for="labelNOTp" id="lblNOTp4"></label></th>
+            <th><label for="labelNOTq" id="lblNOTq4"></label></th>
+        </tr>
+      </table>
+      <br><br>
+      <button onclick="allf()">ALL</button>
+      <button onclick="and()">AND</button>
+      <button onclick="or()">OR</button>
+      <button onclick="not()">NOT</button>
+      <button onclick="clearal()">CLEAR</button>
+
+      <script>
+        function allf(){
+          and();
+          or();
+          not();
+        }
+          
+          function and(){
+            let p1= Number(document.getElementById("p1").value),
+                p2= Number(document.getElementById("p2").value),
+                p3= Number(document.getElementById("p3").value),
+                p4= Number(document.getElementById("p4").value);
+            let q1= Number(document.getElementById("q1").value),
+                q2= Number(document.getElementById("q2").value),
+                q3= Number(document.getElementById("q3").value),
+                q4= Number(document.getElementById("q4").value);
+                document.getElementById("lblAND").innerHTML = p1&&q1;
+                document.getElementById("lblAND2").innerHTML = p2&&q2;
+                document.getElementById("lblAND3").innerHTML = p3&&q3;
+                document.getElementById("lblAND4").innerHTML = p4&&q4;
+          }
+          function or(){
+            let p1= Number(document.getElementById("p1").value),
+                p2= Number(document.getElementById("p2").value),
+                p3= Number(document.getElementById("p3").value),
+                p4= Number(document.getElementById("p4").value);
+            let q1= Number(document.getElementById("q1").value),
+                q2= Number(document.getElementById("q2").value),
+                q3= Number(document.getElementById("q3").value),
+                q4= Number(document.getElementById("q4").value);
+                document.getElementById("lblOR").innerHTML = p1||q1;
+                document.getElementById("lblOR2").innerHTML = p2||q2;
+                document.getElementById("lblOR3").innerHTML = p3||q3;
+                document.getElementById("lblOR4").innerHTML = p4||q4;
+          }
+          function not(){
+            let p1= Number(document.getElementById("p1").value),
+                p2= Number(document.getElementById("p2").value),
+                p3= Number(document.getElementById("p3").value),
+                p4= Number(document.getElementById("p4").value);
+            let q1= Number(document.getElementById("q1").value),
+                q2= Number(document.getElementById("q2").value),
+                q3= Number(document.getElementById("q3").value),
+                q4= Number(document.getElementById("q4").value);
+                document.getElementById("lblNOTp").innerHTML = !p1;
+                document.getElementById("lblNOTp2").innerHTML = !p2;
+                document.getElementById("lblNOTp3").innerHTML = !p3;
+                document.getElementById("lblNOTp4").innerHTML = !p4;
+                document.getElementById("lblNOTq").innerHTML = !q1;
+                document.getElementById("lblNOTq2").innerHTML = !q2;
+                document.getElementById("lblNOTq3").innerHTML = !q3;
+                document.getElementById("lblNOTq4").innerHTML = !q4;
+          }
+          function clearal(){
+                let v=0;
+                document.getElementById("lblOR").innerHTML = "";
+                document.getElementById("lblOR2").innerHTML = "";
+                document.getElementById("lblOR3").innerHTML = "";
+                document.getElementById("lblOR4").innerHTML = "";
+                document.getElementById("lblOR2").innerHTML = "";
+                document.getElementById("lblOR3").innerHTML = "";
+                document.getElementById("lblOR4").innerHTML = "";
+                document.getElementById("lblAND").innerHTML = "";
+                document.getElementById("lblAND2").innerHTML = "";
+                document.getElementById("lblAND3").innerHTML = "";
+                document.getElementById("lblAND4").innerHTML = "";
+                document.getElementById("lblNOTp").innerHTML = "";
+                document.getElementById("lblNOTp2").innerHTML = "";
+                document.getElementById("lblNOTp3").innerHTML = "";
+                document.getElementById("lblNOTp4").innerHTML = "";
+                document.getElementById("lblNOTq").innerHTML = "";
+                document.getElementById("lblNOTq2").innerHTML = "";
+                document.getElementById("lblNOTq3").innerHTML = "";
+                document.getElementById("lblNOTq4").innerHTML = "";
+          }
+
+      </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="nameuser" placeholder="Nombre de usuario">
+    <br><br>
+    <input type="text" id="repeti" placeholder="Número de saludos">
+    <br><br><br>
+    <button onclick="saludar()"> Imprimir saludo </button>
+    <script>
+        function saludar(){
+            let nombre = document.getElementById("nameuser").value;
+            let rep = document.getElementById("repeti").value;
+            if(nombre==""||rep==""){
+                document.write("introduce valor");
+            }
+            else{
+                rep=Number(rep);
+                for(let i=1; i<=rep; i++){
+                document.write("hola buenos días mi estimado "+nombre+"<br>");
+                }
+            }
+        }
+
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica 1</title>
+</head>
+
+<body>
+    <script>
+        var x1=3,x2=4, 
+        suma=x1+x2, resta=x1-x2, 
+        mult=x1*x2, divi=x1/x2;
+        document.write(x1+"+"+x2+"= " +suma+"<br>");
+        document.write(x1+"-"+x2+"= " +resta+"<br>");
+        document.write(x1+"*"+x2+"= " +mult+"<br>");
+        document.write(x1+"/"+x2+"= " +divi);
+        //boolean, number(int, oduble and float), 
+        //string(String, chair) And object(Arry and vector or matrix) Tipo de variables.
+        var boleano=true,
+            numero= 10,
+            numero2 = 13.33,
+            texto = "Hola mundo",
+            objeto = new Date();
+            document.write("<br> tipo boleano "+ typeof(boleano));
+            document.write("<br> tipo numero "+ typeof(numero));
+            document.write("<br> tipo numero2 "+ typeof(numero2));
+            document.write("<br> tipo texto "+ typeof(texto));
+            document.write("<br> tipo objeto "+ typeof(objeto));
+
+            // IF, FOR, WHILE AND DO WHILE
+            if (numero>20) {//True o false
+                document.write("<br>-----------------<br>");
+                document.write(numero +numero2);
+            }
+            else{
+                document.write("<br>-----------------<br>");
+                document.write("El primer valor es mayor a 20"); 
+                
+
+            }
+            document.write("<br>-------FOR----------<br>");
+            for (let index = 2; index <= numero; index+=2) {
+                document.write(index);
+            }
+            document.write("<br>-------WHILE----------<br>");
+            var contador = 1;
+            while (boleano) {
+                document.write(boleano + " contador= " + contador);
+                contador++;
+                if(contador>5){
+                    boleano=false;
+                }
+            }
+
+
+    </script>    
+</body>
+
+</html>

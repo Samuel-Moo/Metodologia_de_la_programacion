@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorteo</title>
+</head>
+<body>
+    <h1>Sorteo de 3 números</h1>
+    <br>
+    <h3>Click para sortear</h3>
+    <button onclick="sortear()">Sortear</button>
+    <button onclick="borrar()">Borrar</button>
+    <table id="cosa"></table>
+    <script>
+         function sortear(){
+        var table = document.getElementById("cosa");
+        x=0;
+        while (x < 3){
+            var rand = Math.floor(Math.random() * 10 + 1); 
+           
+            var row = table.insertRow(0);
+            var cell1 = row.insertCell(0);  
+            cell1.innerHTML = rand;
+            x++;
+        }
+//Este código es muy parecido al de la lista porque se basan en lo mismo
+    }
+        function borrar(){
+            document.getElementById("cosa").deleteRow(0);
+        }
+</script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promedio</title>
+</head>
+<body>
+    <h1>Calculadora de promedios</h1>
+    <table id="lista">
+       
+        <tr>
+            <td>Materia 1</td>
+            <td><input id="materia1" type="number"></td>
+        </tr>
+        <tr>
+            <td>Materia 2</td>
+            <td><input id="materia2" type="number"></td>
+        </tr>
+        <tr>
+            <td>Materia 3</td>
+            <td><input id="materia3" type="number"></td>
+        </tr>
+        <tr>
+            <td>Materia 4</td>
+            <td><input id="materia4" type="number"></td>
+        </tr>
+        <tr>
+            <td>Materia 5 </td>
+            <td><input id="materia5" type="number"></td>
+        </tr>
+        <tr>
+            <td>Materia 6</td>
+            <td><input id="materia6" type="number"></td>
+        </tr>
+        <tr>
+            <td>Materia 7</td>
+            <td><input id="materia7" type="number"></td>
+        </tr>
+    </table>
+        <button onclick="promedio()">Calcular promedio</button>
+        <button onclick="borrar()">Borrar</button>
+
+        <br>
+        <label>Promedio: </label>
+        <label id="final"></label>
+        <script>
+            function promedio(){
+                let materia1 = Number(document.getElementById("materia1").value),
+                materia2 = Number(document.getElementById("materia2").value),
+                materia3 = Number(document.getElementById("materia3").value),
+                materia4 = Number(document.getElementById("materia4").value),
+                materia5 = Number(document.getElementById("materia5").value),
+                materia6 = Number(document.getElementById("materia6").value),
+                materia7 = Number(document.getElementById("materia7").value);
+        
+                    let result = (materia1 + materia2 + materia3 + materia4 + materia5 + materia6 + materia7)/7
+                    document.getElementById("final").innerHTML = result;
+            }
+            function borrar(){
+                    
+          }
+
+            </script>
+</body>
+</html>
+

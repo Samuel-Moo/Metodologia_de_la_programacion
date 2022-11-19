@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista super</title>
+    <link rel="stylesheet" type="text/css" href="Background1.css" media="screen" />
+</head>
+<body>
+    
+    <h1>Lista de supermercado</h1>
+    <br>
+    <h3>Agregar productos a la lista</h3>
+    
+    <input type="text" id="id1">
+    <button onclick="add()">Agregar</button>
+    <button onclick="supr()">Quitar</button>
+    <table id="cosa"></table>
+    <script>
+
+        function add(){
+            let producto = document.getElementById("id1").value;
+            var table = document.getElementById("cosa");
+            var row = table.insertRow(0);
+            var cell1 = row.insertCell(0);  
+            cell1.innerHTML = producto;
+        }
+
+
+        function supr(){
+            document.getElementById("cosa").deleteRow(0);
+        }
+</script>
+</body>
+</html>

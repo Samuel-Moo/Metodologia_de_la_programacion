@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>              
+    <input type="number" name="numero" id="id1">
+    <br><br>
+    <input type="number" name="numero" id="id2">
+    <br><br>
+    
+    <button onclick="suma()">+</button>
+    <button onclick="restar()">-</button>
+    <button onclick="multi()">*</button>
+    <button onclick="divi()">/</button>
+    <script type="text/javascript">
+        function suma(){
+            let num1 = Number(document.getElementById("id1").value);
+            let num2 = Number(document.getElementById("id2").value);
+            document.write(num1+num2);
+        }
+        function restar(){
+            let id1 = Number(document.getElementById("id1").value);
+            let id2 = Number(document.getElementById("id2").value);
+            document.write(id1-id2);
+        }
+        function multi(){
+            let id1 = Number(document.getElementById("id1").value);
+            let id2 = Number(document.getElementById("id2").value);
+            document.write(id1*id2);
+        }
+        function divi(){
+            let id1 = Number(document.getElementById("id1").value);
+            let id2 = Number(document.getElementById("id2").value);
+            document.write(id1/id2);
+        }
+    </script>
+</body>
+</html>

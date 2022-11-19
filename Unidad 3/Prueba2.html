@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de super</title>
+</head>
+<body>
+    <br>
+    <h2>Hacer la lista del mandado</h2>
+
+    <input type="elemento" id="text">
+    <button onclick="poner()">Agregar</button>
+    <button onclick="bye()">quitar</button>
+    <table id="wow"></table>
+    <script>
+
+        function poner(){
+            let producto = document.getElementById("text").value;
+            var table = document.getElementById("wow");
+            var poner = table.insertRow(0);
+            var wow = poner.insertCell(0);
+            wow.innerHTML = producto;
+        }
+
+        function bye(){
+            document.getElementById("wow").deleteRow(0);
+        }
+    </script> 
+
+</body>
+</html>
